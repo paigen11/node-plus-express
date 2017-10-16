@@ -1,0 +1,23 @@
+{
+  "name": "node_plus_express",
+  "version": "1.0.0",
+  "description": "node and express practice with pluralsight",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paigen11/node-plus-express.git"
+  },
+  "author": "Paige Niedringhaus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paigen11/node-plus-express/issues"
+  },
+  "homepage": "https://github.com/paigen11/node-plus-express#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

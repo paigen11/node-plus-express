@@ -1,0 +1,21 @@
+{
+  "name": "node_plus_express",
+  "description": "node and express practice with pluralsight",
+  "main": "app.js",
+  "authors": [
+    "Paige Niedringhaus"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
