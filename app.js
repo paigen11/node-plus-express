@@ -1,5 +1,5 @@
 const express = require('express');
-
+const bodyParser = require('body-parser');
 const app = express();
 
 const port = process.env.PORT || 5000;
@@ -13,10 +13,13 @@ const nav = [{
 
 const bookRouter = require('./src/routes/bookRoutes')(nav);
 const adminRouter = require('./src/routes/adminRoutes')(nav);
+const authRouter = require('./src/routes/authRoutes')(nav);
 
 //Express starts these up before any of our routes do
 app.use(express.static('public'));
 app.set('views', './src/views');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
 //If Jade was our templating engine
 // app.set('view engine', '.jade');
 
@@ -29,6 +32,7 @@ app.set('view engine', 'ejs');
 
 app.use('/Books', bookRouter);
 app.use('/Admin', adminRouter);
+app.use('/Auth', authRouter);
 
 app.get('/', function(req, res){
     res.render('index', {title: "Hello from render",
